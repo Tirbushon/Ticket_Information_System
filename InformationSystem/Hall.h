@@ -3,6 +3,9 @@
 #include <iostream>
 #include <stdexcept>
 #include <cassert>
+#include <vector>
+
+
 
 class Hall
 {
@@ -11,7 +14,7 @@ private:
 	unsigned int rows;
 	unsigned int columns;
 	unsigned int** seats;
-	Event* events;
+	std::vector<Event> events;
 public:
 	Hall();
 	Hall(unsigned int, unsigned int);

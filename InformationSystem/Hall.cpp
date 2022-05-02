@@ -16,7 +16,6 @@ Hall::Hall(unsigned int _rows, unsigned int _columns) {
 			seats[i][j] = 0;
 		}
 	}
-	events = nullptr;
 }
 
 int Hall::getId() const {
