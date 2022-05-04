@@ -50,5 +50,5 @@ void Date::setDay(unsigned int _day) {
 }
 
 void Date::printDate() const {
-	std::cout << getDay() << " " << getMonth() << " " << getYear() << '\n';
+	std::cout << getDay() << "/" << getMonth() << "/" << getYear() << '\n';
 }

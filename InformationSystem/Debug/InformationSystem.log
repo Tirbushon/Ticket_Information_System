@@ -1,2 +1,10 @@
-﻿  Main.cpp
+﻿  Event.cpp
+  Hall.cpp
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(15,20): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(16,21): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(53,20): warning C4018: '<': signed/unsigned mismatch
+  Main.cpp
+  Ticket.cpp
+  Generating Code...
   InformationSystem.vcxproj -> D:\codes\C++\bileti-proektOOP2022\InformationSystem\Debug\InformationSystem.exe
