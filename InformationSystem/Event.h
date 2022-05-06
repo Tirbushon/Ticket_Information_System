@@ -17,6 +17,7 @@ public:
 	std::string getName() const;
 	unsigned int getId() const;
 	Date getDate() const;
+	std::vector<Ticket> getTickets();
 	void setName(std::string);
 	void setId(unsigned int);
 	void printEvent() const;

@@ -23,3 +23,8 @@ public:
 	void printDate() const;
 };
 
+inline bool operator==(const Date& lhs, const Date& rhs) {
+	if (lhs.getDay() == rhs.getDay() && lhs.getMonth() == rhs.getMonth() && lhs.getYear() == rhs.getYear())
+		return true;
+	return false;
+}

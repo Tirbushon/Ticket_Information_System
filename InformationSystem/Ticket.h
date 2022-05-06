@@ -7,12 +7,15 @@ class Ticket
 private:
 	std::string performance;
 	Date date;
-	bool bought;
+	//used for knowing whether the ticket is bought, reserved, or free
+	//by corresponding values 2,1,0
+	unsigned int status;
+	std::string password;
 public:
-	Ticket(std::string, Date, bool);
+	Ticket(std::string, Date, unsigned int);
 	std::string getPerformance() const;
 	Date getDate() const;
-	bool getBought() const;
-	void setBought(bool);
+	unsigned int getStatus() const;
+	void setStatus(unsigned int status);
 };
 

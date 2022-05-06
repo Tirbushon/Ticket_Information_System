@@ -24,10 +24,10 @@
     <ClInclude Include="Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Building.h">
+    <ClInclude Include="Ticket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ticket.h">
+    <ClInclude Include="Commands.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClCompile Include="Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Building.cpp">
+    <ClCompile Include="Ticket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ticket.cpp">
+    <ClCompile Include="Commands.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

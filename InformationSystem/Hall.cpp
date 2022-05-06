@@ -11,7 +11,6 @@ Hall::Hall(unsigned int _rows, unsigned int _columns, unsigned int _id) {
 		seats[i] = new unsigned int[columns];
 	}
 
-	//populate in a private function
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns; j++) {
 			seats[i][j] = 0;
@@ -30,10 +29,7 @@ Event Hall::getIndexEvent(unsigned int index) const {
 void Hall::addEvent(Event& _event) {
 	try {
 		for (Event e : events) {
-			//replace with operator== in Event class
-			if (e.getDate().getDay() == _event.getDate().getDay() &&
-				e.getDate().getMonth() == _event.getDate().getMonth() &&
-				e.getDate().getYear() == _event.getDate().getYear())
+			if (e.getDate() == _event.getDate())
 				throw std::invalid_argument("There is already a performance on that date");
 		}
 		events.push_back(_event);
@@ -47,6 +43,32 @@ void Hall::printEvents() const {
 	for (Event e : events) {
 		e.printEvent();
 	}
+}
+
+unsigned int Hall::getFreeSeats(Event& event, Date date) {
+	int index = 0;
+	bool isCorrectEvent = false;
+	int result = 0;
+	for (int i = 0; i < events.size(); i++) {
+		if (event.getName() == events[i].getName() && event.getDate() == date) {
+			isCorrectEvent = true;
+			index = i;
+		}
+	}
+	if (isCorrectEvent) {
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				
+			}
+		}
+	}
+}
+
+unsigned int** Hall::getSeats() const {
+	return this->seats;
+}
+
+void Hall::setSeatsForEvent(Event& _event) {
 }
 
 Hall::~Hall() {

@@ -1,9 +1,9 @@
 #include "Ticket.h"
 
-Ticket::Ticket(std::string _performance, Date _date, bool _bought) {
+Ticket::Ticket(std::string _performance, Date _date, unsigned int _status) {
 	this->performance = _performance;
 	this->date = _date;
-	this->bought = _bought;
+	this->status = _status;
 }
 
 std::string Ticket::getPerformance() const {
@@ -14,10 +14,10 @@ Date Ticket::getDate() const {
 	return this->date;
 }
 
-bool Ticket::getBought() const {
-	return this->bought;
+unsigned int Ticket::getStatus() const {
+	return this->status;
 }
 
-void Ticket::setBought(bool _bought) {
-	this->bought = _bought;
+void Ticket::setStatus(unsigned int _status) {
+	this->status = _status;
 }

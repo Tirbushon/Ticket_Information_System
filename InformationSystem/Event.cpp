@@ -33,6 +33,7 @@ void Event::addTicket(Ticket& ticket) {
 		tickets.push_back(ticket);
 }
 
+
 void Event::printEvent() const {
 	std::cout << getName() << " " << getId() << " ";
 	date.printDate();

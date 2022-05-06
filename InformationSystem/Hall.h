@@ -5,12 +5,10 @@
 #include <cassert>
 #include <vector>
 
-
-
 class Hall
 {
 private:
-	int id = 0;
+	int id;
 	unsigned int rows;
 	unsigned int columns;
 	unsigned int size;
@@ -24,7 +22,10 @@ public:
 	void addEvent(Event&);
 	Event getIndexEvent(unsigned int) const;
 	int getId() const;
+	unsigned int** getSeats() const;
 	void printEvents() const;
+	unsigned int getFreeSeats(Event&, Date);
+	void setSeatsForEvent(Event&);
 	~Hall();
 };
 
