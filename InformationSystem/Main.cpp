@@ -1,21 +1,59 @@
-#include "Date.h"
-#include "Event.h"
-#include "Hall.h"
+#include "Commands.h"
 
 int main() {
-	Date date(21, 2, 2022);
-	Event event("Krasavicata i zvqra", 1, date);
-	Hall hall(3, 4, 1);
-	hall.addEvent(event);
-	hall.printEvents();
-	std::cout << "---------adding another event -----------\n";
-	Date date1(20, 3, 2980);
-	Event event2("Mn dobre", 1, date1);
-	hall.addEvent(event2);
-	hall.printEvents();
-	std::cout << "---------adding another event -----------\n";
-	Date date2(21, 2, 2022);
-	Event event3("Oshte po dobre", 1, date2);
-	hall.addEvent(event3);
+	try {
+		Commands c;
+		c.loadHalls();
+		c.loadTickets();
+		std::string line = "";
+		while (std::getline(std::cin, line)) {
+			std::string command;
+			std::stringstream ss(line);
+			std::getline(ss, command, ' ');
+			if (command == "add") {
+				std::getline(ss, command, ' ');
+				std::string performanceName = command;
+				std::getline(ss, command, ' ');
+				std::string hallId = command;
+				std::getline(ss, command, ' ');
+				std::string date = command;
+				c.addEvent(performanceName, hallId, date);
+			}
+			else if (command == "check") {
+				std::getline(ss, command, ' ');
+				std::string performanceName = command;
+				std::getline(ss, command, ' ');
+				std::string date = command;
+				c.checkFreeSeats(performanceName, date);
+			}
+			else if (command == "reserve") {
+				std::getline(ss, command, ' ');
+				std::string performanceName = command;
+				std::getline(ss, command, ' ');
+				std::string date = command;
+				std::getline(ss, command, ' ');
+				std::string row = command;
+				std::getline(ss, command, ' ');
+				std::string place = command;
+				std::getline(ss, command, ' ');
+				std::string password = command;
+				std::getline(ss, command, ' ');
+				std::string note = command;
+				c.reserveATicket(performanceName, date, row, place, password, note);
+			}
+			else if (command == "remove") {
+				std::getline(ss, command, ' ');
+				std::string name = command;
+				std::getline(ss, command, ' ');
+				std::string date = command;
+				std::getline(ss, command, ' ');
+				std::string password = command;
+				c.removeReservation(name, date, password);
+			}
+		}
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << '\n';
+	}
 	return 0;
 }

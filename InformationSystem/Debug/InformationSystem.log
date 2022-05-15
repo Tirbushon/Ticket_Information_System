@@ -1,9 +1,13 @@
-﻿  Event.cpp
+﻿  Commands.cpp
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Commands.cpp(116,21): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Commands.cpp(133,20): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Commands.cpp(142,21): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Commands.cpp(172,22): warning C4018: '<': signed/unsigned mismatch
+  Date.cpp
+  Event.cpp
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Event.cpp(21,20): warning C4018: '<': signed/unsigned mismatch
+D:\codes\C++\bileti-proektOOP2022\InformationSystem\Event.cpp(33,21): warning C4018: '<': signed/unsigned mismatch
   Hall.cpp
-D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
-D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(15,20): warning C4018: '<': signed/unsigned mismatch
-D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(16,21): warning C4018: '<': signed/unsigned mismatch
-D:\codes\C++\bileti-proektOOP2022\InformationSystem\Hall.cpp(53,20): warning C4018: '<': signed/unsigned mismatch
   Main.cpp
   Ticket.cpp
   Generating Code...

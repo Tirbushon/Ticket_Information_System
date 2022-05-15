@@ -1,31 +1,21 @@
 #pragma once
 #include "Event.h"
-#include <iostream>
-#include <stdexcept>
-#include <cassert>
-#include <vector>
+
+//A simple hall class representing a hall
+//@id - number of hall
+//@rows - number of rows in the hall
+//@columns - number of columns in the hall
 
 class Hall
 {
 private:
-	int id;
+	unsigned int id;
 	unsigned int rows;
 	unsigned int columns;
-	unsigned int size;
-	unsigned int** seats;
-	std::vector<Event> events;
 public:
-	//Hall();
 	Hall(unsigned int, unsigned int, unsigned int);
-	//Hall& operator=(const Hall&);
-	//Hall(const Hall&);
-	void addEvent(Event&);
-	Event getIndexEvent(unsigned int) const;
-	int getId() const;
-	unsigned int** getSeats() const;
-	void printEvents() const;
-	unsigned int getFreeSeats(Event&, Date);
-	void setSeatsForEvent(Event&);
-	~Hall();
+	unsigned int getId() const;
+	unsigned int getRows() const;
+	unsigned int getColumns() const;
 };
 
